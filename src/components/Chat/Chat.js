@@ -4,7 +4,6 @@ import Send from '../Send';
 import User from '../Users';
 import io from 'socket.io-client';
 import './Chat.css';
-//test
 
 class Chat extends Component {
   constructor(props) {
@@ -12,7 +11,7 @@ class Chat extends Component {
     this.div = React.createRef();
     this.state = {
       currentUser: 'Anonimus',
-      messages: [{ user: 'Owl', text: 'test' }],
+      messages: [{ user: 'System', text: 'Welcome!' }],
       inputMsg: '',
       isLogin: false,
       users: {},
@@ -21,7 +20,7 @@ class Chat extends Component {
   }
 
   setListeners = () => {
-    this.socket = io('https://beetchat.herokuapp.com/');
+    this.socket = io('http://localhost:5000');
     this.socket.on('connect', () => {
       this.socket.emit('addUser', this.state.currentUser);
     });
