@@ -1,0 +1,17 @@
+.message {
+  margin: 5px 0;
+  text-align: left;
+  align-self: flex-start;
+  background-color: #5b5bff;
+  border-radius: 15px;
+  color: #fff;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  padding: 5px 15px;
+}
+.message-container {
+  display: flex;
+  justify-content: flex-start;
+}
+.end {
+  float: 1 1;
+}
