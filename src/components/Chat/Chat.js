@@ -20,7 +20,7 @@ class Chat extends Component {
   }
 
   setListeners = () => {
-    this.socket = io('localhost:5000');
+    this.socket = io('https://beetchat.herokuapp.com/');
     this.socket.on('connect', () => {
       this.socket.emit('addUser', this.state.currentUser);
     });
